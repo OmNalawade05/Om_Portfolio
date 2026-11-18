@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #F8F1E3;
+  --color-forest: #003D2E;
+  --color-gold: #F5B51B;
+  --color-moss: #3D524A;
+  --color-muted: #EFE6D4;
+  --color-ink: #0B2019;
+
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: #F8F1E3;
+  color: #0B2019;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* RetailX Continuous Infinite Gallery */
+
+.retailx-gallery-track {
+  display: flex;
+  width: max-content;
+  gap: 0;
+  animation: retailx-infinite 40s linear infinite;
+  will-change: transform;
+}
+
+.retailx-gallery-slide {
+  flex: 0 0 auto;
+}
+
+.retailx-gallery-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes retailx-infinite {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
